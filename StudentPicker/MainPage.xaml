@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.BackgroundColor="#8B0000"
+             x:Class="StudentPicker.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="Resources/Styles.css" />
+    </ContentPage.Resources>
+
+    <StackLayout StyleId="mainPage">
+
+        <Entry x:Name="nameEntry" Placeholder="Imię" StyleClass="entryStyle" />
+        <Entry x:Name="surnameEntry" Placeholder="Nazwisko" StyleClass="entryStyle" />
+        <Entry x:Name="numberEntry" Placeholder="Numer na liście" IsReadOnly="True" Text="1" StyleClass="entry" />
+
+        <StackLayout StyleClass="buttons">
+            <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" StyleClass="button" />
+            <Button Text="Edytuj Listę uczniów" Clicked="OnDeleteStudentClicked" StyleClass="button" />
+            <Button Text="Wyświetl uczniów" Clicked="OnShowStudentsClicked" StyleClass="button" />
+            <Button Text="Wylosuj ucznia" Clicked="OnPickRandomStudentClicked" StyleClass="button" />
+            <Button Text="Zapisz listę do pliku" Clicked="OnSaveFileClicked" StyleClass="button" />
+            <Button Text="Załaduj listę z pliku" Clicked="OnLoadFileClicked" StyleClass="button" />
+            <Picker SelectedIndex="0" x:Name="StudentsClass" Title="StudentClass" SelectedIndexChanged="onPickerSelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1A</x:String>
+                        <x:String>1B</x:String>
+                        <x:String>1C</x:String>
+                        <x:String>2A</x:String>
+                        <x:String>2B</x:String>
+                        <x:String>3A</x:String>
+                        <x:String>3B</x:String>
+                        <x:String>4A</x:String>
+                        <x:String>4B</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿NavigationPage.TitleView {
+    background-color: #141414;
+    color: #ffffff;
+    padding: 20;
+    font-size: 30;
+}
+
+StackLayout > Entry {
+    border-color: #b6ff00;
+    border-width: 1;
+    padding: 10;
+    margin-bottom: 12;
+    border-radius: 5;
+    text-align: center;
+}
+
+#mainPage {
+    background-color: #141414;
+    padding: 20;
+    text-align: center;
+}
+
+^Label {
+    font-size: 20;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #141414;
+    color: #ffffff;
+    width: 400;
+    height: 50;
+    text-align: center;
+    border-radius: 10;
+    border-width: 2;
+    border-color: #b6ff00;
+}
+
+.buttons {
+    width: 500;
+    height: 50;
+    text-align: center;
+}
